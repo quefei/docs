@@ -16,7 +16,7 @@
 
 **1.4 安装 kmod 包：**
 
-下载并安装：`rpm -ivh kmod-forcedeth-0.64-2.el7.elrepo.x86_64.rpm`，重新开机即可。
+下载并安装 kmod 包：`rpm -ivh kmod-forcedeth-0.64-2.el7.elrepo.x86_64.rpm`，重新开机即可。
 
 
 
