@@ -25,9 +25,14 @@
 
 **1.3 扩展逻辑卷 usr_local：**
 
+给逻辑卷 usr_local 增加 50G：
 
+    lvextend -L +50G -f -r /dev/cl/usr_local
 
+让逻辑卷 usr_local 达到 600G：
 
+    lvextend -L 600G -f -r /dev/cl/usr_local
 
+给逻辑卷 usr_local 增加 `剩余空间`：
 
-
+    lvextend -l +100%FREE -f -r /dev/cl/usr_local
