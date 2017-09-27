@@ -12,11 +12,11 @@
 
 打开页面 [http://elrepo.org/tiki/DeviceIDs][2]，搜索 `10de:03ef`，获得 kmod 包的名称，形如：`kmod-forcedeth`。
 
-打开页面 [https://mirrors.tuna.tsinghua.edu.cn/elrepo/elrepo/el7/x86_64/RPMS/][3]，搜索 `kmod-forcedeth`，获得 kmod 包，形如：`kmod-forcedeth-0.64-2.el7.elrepo.x86_64.rpm`。
+打开页面 [https://mirrors.tuna.tsinghua.edu.cn/elrepo/elrepo/el7/x86_64/RPMS/][3]，搜索 `kmod-forcedeth`，获得 kmod 包，形如：`kmod-forcedeth-0.64-3.el7.elrepo.x86_64.rpm`。
 
 **1.4 安装 kmod 包：**
 
-下载并安装 kmod 包：`rpm -ivh kmod-forcedeth-0.64-2.el7.elrepo.x86_64.rpm`，重新开机即可。
+下载并安装 kmod 包：`rpm -ivh kmod-forcedeth-0.64-3.el7.elrepo.x86_64.rpm`，重新开机即可。
 
 
 
