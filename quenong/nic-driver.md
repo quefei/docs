@@ -18,12 +18,26 @@
 
 下载并安装 kmod 包：`rpm -ivh kmod-forcedeth-0.64-3.el7.elrepo.x86_64.rpm`，然后重新开机。
 
+**1.5 获取网络接口：**
 
+执行命令 `nmcli dev status`，获得网络接口，形如：`enp0s7`。
 
+**1.6 配置静态 IP：**
 
+新建文件 `/etc/sysconfig/network-scripts/ifcfg-enp0s7`，并添加内容：
 
+    NM_CONTROLLED=no
+    DEVICE=enp0s7
+    BOOTPROTO=static
+    ONBOOT=yes
+    IPADDR=192.168.1.10
+    PREFIX=24
+    GATEWAY=192.168.1.1
+    DNS1=114.114.114.114
 
+**1.7 重启网络：**
 
+执行命令 `systemctl restart network.service`。
 
   [1]: http://mirrors.aliyun.com/centos/7/os/x86_64/Packages/pciutils-3.5.1-2.el7.x86_64.rpm
   [2]: http://elrepo.org/tiki/DeviceIDs
