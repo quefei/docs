@@ -92,7 +92,7 @@
 
     mkfs.xfs -f /dev/el/backup
 
-**1.3 手动挂载逻辑卷 backup：**
+**1.13 手动挂载逻辑卷 backup：**
 
     mkdir -p /backup
     mount /dev/el/backup /backup
