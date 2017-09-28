@@ -28,7 +28,8 @@
     Using /dev/sdb
     Welcome to GNU Parted! Type 'help' to view a list of commands.
     (parted) mklabel gpt ......................................... # 1 - 定义分区表格式
-    Warning: The existing disk label on /dev/sdb will be destroyed and all data on this disk will be lost. Do you want to continue?
+    Warning: The existing disk label on /dev/sdb will be destroyed and all data on this disk will be lost. 
+    Do you want to continue?
     Yes/No? yes .................................................. # 2 - 确认操作
     (parted) mkpart .............................................. # 3 - 创建分区
     Partition name?  []?
