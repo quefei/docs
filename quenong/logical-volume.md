@@ -16,12 +16,22 @@
 
 **1.2 创建逻辑卷 backup：**
 
+在卷组 `cl` 上，创建逻辑卷 backup，分配 200G 空间：
 
+    lvcreate -L 200G -n backup cl
 
+或者分配 `剩余空间`：
 
+    lvcreate -l +100%FREE -n backup cl
 
+获得设备 `/dev/cl/backup`，用于挂载。
 
+然后：
 
+ - 格式化：`mkfs.xfs /dev/cl/backup`
+ - 挂载点：`mkdir -p /backup`
+ - 手动挂载：`mount /dev/cl/backup /backup`
+ - 使用情况：`df -h`
 
 **1.3 扩展逻辑卷 usr_local：**
 
