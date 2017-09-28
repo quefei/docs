@@ -60,6 +60,33 @@
     (parted) quit ................................................ # 9 - 退出
     Information: You may need to update /etc/fstab.
 
+**1.5 重新读取分区信息：**
+
+    partprobe /dev/sdb
+
+**1.6 将分区 /dev/sdb1 创建为物理卷：**
+
+    pvcreate /dev/sdb1
+
+**1.7 显示所有的物理卷：**
+
+    pvdisplay
+
+**1.8 创建卷组 el，并且将物理卷 /dev/sdb1 加入卷组：**
+
+    vgcreate el /dev/sdb1
+
+**1.9 显示卷组 el：** 
+
+    vgdisplay el
+
+**1.10 在卷组 el 上，创建逻辑卷 backup，分配所有的空闲空间：**
+
+    lvcreate -l +100%FREE -n backup el
+
+
+
+
 
 
 
