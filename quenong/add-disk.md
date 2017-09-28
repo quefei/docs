@@ -27,15 +27,15 @@
     GNU Parted 3.1
     Using /dev/sdb
     Welcome to GNU Parted! Type 'help' to view a list of commands.
-    (parted) mklabel gpt .........................................
+    (parted) mklabel gpt ......................................... # 1 - 定义分区表格式
     Warning: The existing disk label on /dev/sdb will be destroyed and all data on this disk will be lost. Do you want to continue?
-    Yes/No? yes ..................................................
-    (parted) mkpart ..............................................
+    Yes/No? yes .................................................. # 2 - 确认操作
+    (parted) mkpart .............................................. # 3 - 创建分区
     Partition name?  []?
     File system type?  [ext2]?
-    Start? 1 .....................................................
-    End? -1 ......................................................
-    (parted) print ...............................................
+    Start? 1 ..................................................... # 4 - 定义分区的起始位置
+    End? -1 ...................................................... # 5 - 定义分区的结束位置，-1 代表到末尾
+    (parted) print ............................................... # 6 - 查看分区
     Model: ATA WDC WD10EZEX-08W (scsi)
     Disk /dev/sdb: 1000GB
     Sector size (logical/physical): 512B/4096B
@@ -45,8 +45,8 @@
     Number  Start   End     Size    File system  Name  Flags
      1      1049kB  1000GB  1000GB  ntfs
     
-    (parted) toggle 1 lvm ........................................
-    (parted) print ...............................................
+    (parted) toggle 1 lvm ........................................ # 7 - 给 1 号分区标记为 lvm
+    (parted) print ............................................... # 8 - 查看分区
     Model: ATA WDC WD10EZEX-08W (scsi)
     Disk /dev/sdb: 1000GB
     Sector size (logical/physical): 512B/4096B
@@ -56,7 +56,7 @@
     Number  Start   End     Size    File system  Name  Flags
      1      1049kB  1000GB  1000GB  ntfs               lvm
     
-    (parted) quit ................................................
+    (parted) quit ................................................ # 9 - 退出
     Information: You may need to update /etc/fstab.
 
 
