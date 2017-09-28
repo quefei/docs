@@ -28,7 +28,7 @@
 
 然后：
 
- - 格式化：`mkfs.xfs /dev/cl/backup`
+ - 格式化：`mkfs.xfs -f /dev/cl/backup`
  - 挂载点：`mkdir -p /backup`
  - 手动挂载：`mount /dev/cl/backup /backup`
  - 使用情况：`df -h`
